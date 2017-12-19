@@ -1,5 +1,5 @@
 class Merchant < ApplicationRecord
-  has_many :itens
+  has_many :items
 
   validates :name, :address, presence: true
   validates :name, uniqueness: { case_sensitive: false }
