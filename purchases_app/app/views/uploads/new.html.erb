@@ -1,0 +1,12 @@
+<div class='container'>
+  <h3>File Upload</h3>
+  <div class='form-group'>
+    <%= form_tag uploads_path, method: :post, multipart: true do %>
+    <%= file_field_tag :file %>
+  </div>
+
+  <div class='actions'>
+    <%= submit_tag 'Confirm', class: 'btn btn-primary' %>
+  </div>
+  <% end %>
+</div>

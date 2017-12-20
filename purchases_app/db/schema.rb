@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20171219002153) do
   create_table "purchases", force: :cascade do |t|
     t.integer "item_id"
     t.integer "purchaser_id"
+    t.integer "count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_purchases_on_item_id"
