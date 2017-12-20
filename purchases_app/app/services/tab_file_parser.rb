@@ -26,17 +26,16 @@ class TabFileParser
   def read_file(file)
     purchases = []
 
-    CSV.foreach(file.path, col_sep: "\t", headers: true) do |row|
+    CSV.foreach(file.path, col_sep: "\t", headers: true, header_converters: :symbol) do |row|
       content = row.to_hash
 
-      purchaser = parse_purchaser(content["purchaser name"])
+      purchaser = parse_purchaser(content[:purchaser_name])
 
-      merchant =
-        parse_merchant(content["merchant name"], content["merchant address"])
+      merchant = parse_merchant(content[:merchant_name], content[:merchant_address])
 
-      item = parse_item(content["item description"], content["item price"], merchant)
+      item = parse_item(content[:item_description], content[:item_price], merchant)
 
-      purchase = parse_purchase(purchaser, item, content["purchase count"])
+      purchase = parse_purchase(purchaser, item, content[:purchase_count])
 
       purchases << purchase
     end
