@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          password_length: 8..64
 
+  devise :omniauthable, omniauth_providers: %i[facebook]
 end
