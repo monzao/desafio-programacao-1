@@ -1,3 +1,31 @@
+# Purchases App
+
+Esta é uma aplicação Rails cuja funcionalidade é permitir que o usuário possa realizar o upload de arquivos no formato`.tab`com informações referentes as compras realizadas.
+
+## System dependencies
+* Ruby, RubyGems >= 2.3.4
+* Rails >= 5.1.4
+* SQLite3
+* NodeJS >= 6.0
+* Gem Bundle >= 1.15.4
+
+## Configuration > First run
+
+### First install
+    bundle install
+
+### Database creation, initialization
+    rails db:create
+    rails db:migrate
+
+### Running
+
+Just run:
+
+ * `rails s` for rails server
+
+----------
+
 # Desafio de programação 1
 A idéia deste desafio é nos permitir avaliar melhor as habilidades de candidatos à vagas de programador, de vários níveis.
 
@@ -33,7 +61,7 @@ Sua aplicação web não precisa:
 1. Ter uma aparência bonita.
 
 ## Avaliação
-Seu projeto será avaliado de acordo com os seguintes critérios. 
+Seu projeto será avaliado de acordo com os seguintes critérios.
 
 1. Sua aplicação preenche os requerimentos básicos?
 1. Você documentou a maneira de configurar o ambiente e rodar sua aplicação?
