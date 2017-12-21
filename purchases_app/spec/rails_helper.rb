@@ -13,6 +13,8 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
   config.formatter = :documentation
   config.include FactoryBot::Syntax::Methods
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :view
 end
 
 Shoulda::Matchers.configure do |config|

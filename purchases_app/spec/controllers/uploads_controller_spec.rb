@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe UploadsController, type: :controller do
+  let(:user) { create(:user) }
+  before { sign_in user }
 
   describe '#new' do
     context 'Rendering' do
